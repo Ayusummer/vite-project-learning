@@ -5,6 +5,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import Marquee from './components/Marquee.vue';
 import VueOn from './components/vueon.vue';
 import VueModel from './components/vuemodel.vue';
+import VueBind from './components/vuebind.vue';
 
 </script>
 
@@ -15,7 +16,8 @@ import VueModel from './components/vuemodel.vue';
   <!-- <HelloWorld msg="233" /> -->
   <!-- <Marquee /> -->
   <!-- <VueOn /> -->
-  <VueModel />
+  <!-- <VueModel /> -->
+  <VueBind />
 </template>
 
 <style>
