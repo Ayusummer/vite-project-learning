@@ -1,0 +1,49 @@
+<!-- 跑马灯组件 -->
+<script setup lang="ts">
+import { ref } from 'vue'
+import { defineProps } from 'vue'
+
+// let props = defineProps({
+//     msg1: String
+// })
+// console.log(props.msg1)
+
+let msg = ref<string>("这是一个跑马灯")
+let intervalId: number = 0
+
+const startMethod = (): void => {
+    // 开始定时器之前进行判断, 避免产生多个定时器
+    if (intervalId) {
+        return
+    }
+    // 添加定时器: 点击按钮后, 让字符串持续滚动
+    intervalId = setInterval((): void => {
+        // 获取 msg 的第一个字符
+        let start: string = msg.value.substring(0, 1);
+        // 获取 后面的所有字符
+        let end = msg.value.substring(1);
+        // 重新拼接得到新的字符串，并赋值给 this.msg
+        msg.value = end + start;
+        console.log(msg.value)
+    }, 400)
+}
+
+const stopMethod = (): void => {
+    // 停止定时器
+    clearInterval(intervalId);
+    // 将 intervalId 置为 0
+    intervalId = 0;
+}
+
+
+</script>
+
+<template>
+    <!-- <p>{{ msg1 }}</p> -->
+    <p>{{ msg }}</p>
+    <input type="button" value="跑马灯走起" @click="startMethod" />
+    <input type="button" value="跑马灯停止" @click="stopMethod" />
+</template>
+
+<style>
+</style> 
