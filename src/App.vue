@@ -16,8 +16,8 @@ import VueBind from './components/vuebind.vue';
   <!-- <HelloWorld msg="233" /> -->
   <!-- <Marquee /> -->
   <!-- <VueOn /> -->
-  <!-- <VueModel /> -->
-  <VueBind />
+  <VueModel />
+  <!-- <VueBind /> -->
 </template>
 
 <style>
