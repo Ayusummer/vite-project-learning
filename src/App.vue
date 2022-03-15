@@ -6,6 +6,8 @@ import Marquee from './components/Marquee.vue';
 import VueOn from './components/vueon.vue';
 import VueModel from './components/vuemodel.vue';
 import VueBind from './components/vuebind.vue';
+import VueComputed from './components/vuecomputed.vue';
+import VueComputedT from './components/vuecomputedt_test.vue';
 
 </script>
 
@@ -16,8 +18,10 @@ import VueBind from './components/vuebind.vue';
   <!-- <HelloWorld msg="233" /> -->
   <!-- <Marquee /> -->
   <!-- <VueOn /> -->
-  <VueModel />
+  <!-- <VueModel /> -->
   <!-- <VueBind /> -->
+  <VueComputed />
+  <VueComputedT />
 </template>
 
 <style>
