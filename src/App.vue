@@ -8,6 +8,8 @@ import VueModel from './components/vuemodel.vue';
 import VueBind from './components/vuebind.vue';
 import VueComputed from './components/vuecomputed.vue';
 import VueComputedT from './components/vuecomputedt_test.vue';
+import VueWatch from './components/vuewatch.vue';
+import Vuewatch from './components/vuewatch.vue';
 
 </script>
 
@@ -20,8 +22,9 @@ import VueComputedT from './components/vuecomputedt_test.vue';
   <!-- <VueOn /> -->
   <!-- <VueModel /> -->
   <!-- <VueBind /> -->
-  <VueComputed />
-  <VueComputedT />
+  <!-- <VueComputed /> -->
+  <!-- <VueComputedT /> -->
+  <Vuewatch />
 </template>
 
 <style>
