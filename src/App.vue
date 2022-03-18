@@ -10,6 +10,7 @@ import VueComputed from './components/vuecomputed.vue';
 import VueComputedT from './components/vuecomputedt_test.vue';
 import VueWatch from './components/vuewatch.vue';
 import Vuewatch from './components/vuewatch.vue';
+import Vuewatcheffect from './components/vuewatcheffect.vue';
 
 </script>
 
@@ -24,7 +25,8 @@ import Vuewatch from './components/vuewatch.vue';
   <!-- <VueBind /> -->
   <!-- <VueComputed /> -->
   <!-- <VueComputedT /> -->
-  <Vuewatch />
+  <!-- <Vuewatch /> -->
+  <vuewatcheffect />
 </template>
 
 <style>
