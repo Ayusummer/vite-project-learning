@@ -11,11 +11,14 @@ import VueComputedT from './components/vuecomputedt_test.vue';
 import VueWatch from './components/vuewatch.vue';
 import Vuewatch from './components/vuewatch.vue';
 import Vuewatcheffect from './components/vuewatcheffect.vue';
+import lessLayout from './layout_less/less_layout.vue';
 
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <div class="vueLogo">
+    <img alt="Vue logo" src="./assets/logo.png" />
+  </div>
 
   <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
   <!-- <HelloWorld msg="233" /> -->
@@ -26,16 +29,26 @@ import Vuewatcheffect from './components/vuewatcheffect.vue';
   <!-- <VueComputed /> -->
   <!-- <VueComputedT /> -->
   <!-- <Vuewatch /> -->
-  <vuewatcheffect />
+  <!-- <vuewatcheffect /> -->
+  <lessLayout />
 </template>
 
-<style>
+<style lang="less">
+html,
+body,
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  // font-family: Avenir, Helvetica, Arial, sans-serif;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  // margin-top: 60px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.vueLogo {
+  height: 40%;
+  border: 1px solid #ccc;
 }
 </style>
