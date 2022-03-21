@@ -30,7 +30,8 @@ import lessLayout from './layout_less/less_layout.vue';
   <!-- <VueComputedT /> -->
   <!-- <Vuewatch /> -->
   <!-- <vuewatcheffect /> -->
-  <lessLayout />
+  <!-- <lessLayout /> -->
+  <Card content="此处为内容区域 233333" />
 </template>
 
 <style lang="less">
