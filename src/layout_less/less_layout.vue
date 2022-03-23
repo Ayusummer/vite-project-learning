@@ -17,7 +17,7 @@ const getList = (list: number[]) => {
 
 <template>
     <div class="layout_less">
-        {{ exposeArrayFromMenu }}
+        <!-- <div>{{ exposeArrayFromMenu }}</div> -->
         <lessMenu
             message="传递一个字符串"
             v-bind:data_array="data_array"

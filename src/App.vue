@@ -30,8 +30,8 @@ import lessLayout from './layout_less/less_layout.vue';
   <!-- <VueComputedT /> -->
   <!-- <Vuewatch /> -->
   <!-- <vuewatcheffect /> -->
-  <!-- <lessLayout /> -->
-  <Card content="此处为内容区域 233333" />
+  <lessLayout />
+  <!-- <Card content="此处为内容区域 233333" /> -->
 </template>
 
 <style lang="less">
@@ -41,7 +41,7 @@ body,
   // font-family: Avenir, Helvetica, Arial, sans-serif;
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  // text-align: center;
   color: #2c3e50;
   // margin-top: 60px;
   height: 100%;

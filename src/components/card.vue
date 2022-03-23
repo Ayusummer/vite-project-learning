@@ -2,7 +2,7 @@
 <script setup lang="ts">
 
 type Props = {
-    content: string
+    content?: string
 }
 defineProps<Props>()
 
