@@ -2,7 +2,8 @@
 import A from './A.vue'
 import B from './B.vue'
 import C from './C.vue'
-import {reactive, markRaw} from 'vue'
+import Dialog from '../../components/Dialog.vue'
+import {reactive, markRaw, ref} from 'vue'
 
 type Tabs = {
     name: string,
@@ -34,10 +35,40 @@ let current = reactive<Com>({
 const switchCom =(item: Tabs) =>{
     current.comName = item.comName
 }
+
+// 动态插槽相关
+let name = ref('dialog_header')
 </script>
 
 <template>
     <div class="content_layout">
+        <Dialog>
+            <!-- 具名插槽 -->
+            <template v-slot:dialog_header>
+                <div>
+                    摆
+                </div>
+            </template>
+            <!-- 匿名插槽 -->
+            <!-- <template v-slot="{data}"> -->
+            <!-- 简写: -->
+            <template #default="{data}">
+                <div>
+                    姓名: {{data.name}} 年龄: {{data.age}}
+                </div>
+            </template>
+            <!-- 具名插槽 -->
+            <!-- 简写: -->
+            <template #dialog_footer>
+                <div>
+                    摸了
+                </div>
+            </template>
+            <!-- 动态插槽 -->
+            <template #[name]>
+                动态插槽演示
+            </template>
+        </Dialog>
         <div class = "tab">
             <div :key="item.name" v-for="item in data"
                 @click="switchCom(item)">
