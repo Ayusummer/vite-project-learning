@@ -45,6 +45,11 @@ let name = ref('dialog_header')
 
 <template>
     <div class="content_layout">
+        <teleport to='.teleport_class_test'>
+            <div class="loading">
+                loading...
+            </div>
+        </teleport>
         <!-- 异步组件测试 -->
         <Suspense>
             <template #default>
@@ -121,5 +126,12 @@ let name = ref('dialog_header')
             background: #eee;
         }
     }
+}
+
+.loading{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: greenyellow;
 }
 </style>
