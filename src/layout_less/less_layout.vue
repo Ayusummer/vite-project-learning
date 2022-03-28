@@ -34,7 +34,7 @@ const getList = (list: number[]) => {
 <style lang="less" scoped>
 .layout_less {
     display: flex;
-    height: 60%;
+    height: 100%;
     overflow: hidden;
     border: 1px solid #ccc;
     &-right {

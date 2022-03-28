@@ -3,7 +3,10 @@ import A from './A.vue'
 import B from './B.vue'
 import C from './C.vue'
 import Dialog from '../../components/Dialog.vue'
-import {reactive, markRaw, ref} from 'vue'
+// import Loading from '../../components/Loading/loading.vue' 异步化组件后就不能这样直接引入使用了
+import {reactive, markRaw, ref, defineAsyncComponent} from 'vue'
+
+const Loading = defineAsyncComponent(() => import('../../components/Loading/loading.vue'))
 
 type Tabs = {
     name: string,
@@ -42,6 +45,16 @@ let name = ref('dialog_header')
 
 <template>
     <div class="content_layout">
+        <!-- 异步组件测试 -->
+        <Suspense>
+            <template #default>
+                <Loading></Loading>
+            </template>
+            <template #fallback>
+                <div>加载中...</div>
+            </template>
+        </Suspense>
+        <!-- 插槽测试 -->
         <Dialog>
             <!-- 具名插槽 -->
             <template v-slot:dialog_header>

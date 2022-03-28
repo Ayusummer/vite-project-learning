@@ -16,9 +16,9 @@ import lessLayout from './layout_less/less_layout.vue';
 </script>
 
 <template>
-  <div class="vueLogo">
+  <!-- <div class="vueLogo">
     <img alt="Vue logo" src="./assets/logo.png" />
-  </div>
+  </div> -->
 
   <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
   <!-- <HelloWorld msg="233" /> -->
