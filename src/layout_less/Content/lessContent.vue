@@ -4,6 +4,10 @@ import B from './B.vue'
 import C from './C.vue'
 import Dialog from '../../components/Dialog.vue'
 // import Loading from '../../components/Loading/loading.vue' 异步化组件后就不能这样直接引入使用了
+// 引入登录组件
+import Login from '../../components/login/login.vue'
+// 引入注册组件
+import Register from '../../components/register/register.vue'
 import {reactive, markRaw, ref, defineAsyncComponent} from 'vue'
 
 const Loading = defineAsyncComponent(() => import('../../components/Loading/loading.vue'))
@@ -41,10 +45,21 @@ const switchCom =(item: Tabs) =>{
 
 // 动态插槽相关
 let name = ref('dialog_header')
+
+// 切换登录注册表单页面
+const flag = ref(true)
+const switchLoginRegist = () => {
+    flag.value = !flag.value
+}
 </script>
 
 <template>
     <div class="content_layout">
+        <button @click="switchLoginRegist">切换</button>
+        <keep-alive :include="['Login']">
+            <Login v-if="flag"></Login>
+            <Register v-else></Register>
+        </keep-alive>
         <teleport to='.teleport_class_test'>
             <div class="loading">
                 loading...
