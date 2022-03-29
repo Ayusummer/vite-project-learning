@@ -12,6 +12,7 @@ import VueWatch from './components/vuewatch.vue';
 import Vuewatch from './components/vuewatch.vue';
 import Vuewatcheffect from './components/vuewatcheffect.vue';
 import lessLayout from './layout_less/less_layout.vue';
+import TransitionTest from './components/transition/transition_test.vue';
 
 </script>
 
@@ -30,8 +31,9 @@ import lessLayout from './layout_less/less_layout.vue';
   <!-- <VueComputedT /> -->
   <!-- <Vuewatch /> -->
   <!-- <vuewatcheffect /> -->
-  <lessLayout />
+  <!-- <lessLayout /> -->
   <!-- <Card content="此处为内容区域 233333" /> -->
+  <TransitionTest></TransitionTest>
 </template>
 
 <style lang="less">
