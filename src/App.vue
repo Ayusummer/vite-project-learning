@@ -15,6 +15,7 @@ import lessLayout from './layout_less/less_layout.vue';
 import TransitionTest from './components/transition/transition_test.vue';
 import TransitionTestGsap from './components/transition/transition_test_gsap.vue';
 import Transition_test_gsap from './components/transition/transition_test_gsap.vue';
+import Transition_test_appear from './components/transition/transition_test_appear.vue';
 </script>
 
 <template>
@@ -35,7 +36,8 @@ import Transition_test_gsap from './components/transition/transition_test_gsap.v
   <!-- <lessLayout /> -->
   <!-- <Card content="此处为内容区域 233333" /> -->
   <!-- <TransitionTest></TransitionTest> -->
-  <Transition_test_gsap></Transition_test_gsap>
+  <!-- <Transition_test_gsap></Transition_test_gsap> -->
+  <Transition_test_appear></Transition_test_appear>
 </template>
 
 <style lang="less">
