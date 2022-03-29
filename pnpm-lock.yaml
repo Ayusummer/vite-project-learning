@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@vitejs/plugin-vue': ^2.2.0
   animate.css: ^4.1.1
+  gsap: ^3.9.1
   less: ^4.1.2
   less-loader: ^10.2.0
   pinia: ^2.0.11
@@ -14,6 +15,7 @@ specifiers:
 
 dependencies:
   animate.css: registry.npmmirror.com/animate.css/4.1.1
+  gsap: registry.npmmirror.com/gsap/3.9.1
   pinia: registry.npmmirror.com/pinia/2.0.11_typescript@4.5.5+vue@3.2.30
   vue: registry.npmmirror.com/vue/3.2.30
   webpack: registry.npmmirror.com/webpack/5.70.0
@@ -1051,6 +1053,12 @@ packages:
     name: graceful-fs
     version: 4.2.9
     requiresBuild: true
+
+  registry.npmmirror.com/gsap/3.9.1:
+    resolution: {integrity: sha512-JSGVYoC6da4pIjdF/yxFU6Rz8OojOIDkbooveZlfNg0+JIoFoRruyfWAEi6R/gUeNcuOiTqUIb0gi1nCNrHf8w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/gsap/-/gsap-3.9.1.tgz}
+    name: gsap
+    version: 3.9.1
+    dev: false
 
   registry.npmmirror.com/has-flag/4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/has-flag/-/has-flag-4.0.0.tgz}
