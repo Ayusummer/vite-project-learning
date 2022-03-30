@@ -19,6 +19,7 @@ import Transition_test_appear from './components/transition/transition_test_appe
 import TransitionGroupTest from './components/transition_group/transition_group_test.vue';
 import TransitionGroupTestFLIP from './components/transition_group/transition_group_test_flip.vue';
 import TransitionGroupTestStatus from './components/transition_group/transition_group_test_status.vue';
+import PIA from './components/ProvideInject/PI_A.vue';
 </script>
 
 <template>
@@ -43,7 +44,8 @@ import TransitionGroupTestStatus from './components/transition_group/transition_
   <!-- <Transition_test_appear></Transition_test_appear> -->
   <!-- <TransitionGroupTest></TransitionGroupTest> -->
   <!-- <TransitionGroupTestFLIP></TransitionGroupTestFLIP> -->
-  <TransitionGroupTestStatus></TransitionGroupTestStatus>
+  <!-- <TransitionGroupTestStatus></TransitionGroupTestStatus> -->
+  <PIA></PIA>
 </template>
 
 <style lang="less">
