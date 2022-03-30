@@ -17,12 +17,14 @@ import TransitionTestGsap from './components/transition/transition_test_gsap.vue
 import Transition_test_gsap from './components/transition/transition_test_gsap.vue';
 import Transition_test_appear from './components/transition/transition_test_appear.vue';
 import TransitionGroupTest from './components/transition_group/transition_group_test.vue';
+import TransitionGroupTestFLIP from './components/transition_group/transition_group_test_flip.vue';
+import TransitionGroupTestStatus from './components/transition_group/transition_group_test_status.vue';
 </script>
 
 <template>
   <!-- <div class="vueLogo">
     <img alt="Vue logo" src="./assets/logo.png" />
-  </div> -->
+  </div>-->
 
   <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
   <!-- <HelloWorld msg="233" /> -->
@@ -39,7 +41,9 @@ import TransitionGroupTest from './components/transition_group/transition_group_
   <!-- <TransitionTest></TransitionTest> -->
   <!-- <Transition_test_gsap></Transition_test_gsap> -->
   <!-- <Transition_test_appear></Transition_test_appear> -->
-  <TransitionGroupTest></TransitionGroupTest>
+  <!-- <TransitionGroupTest></TransitionGroupTest> -->
+  <!-- <TransitionGroupTestFLIP></TransitionGroupTestFLIP> -->
+  <TransitionGroupTestStatus></TransitionGroupTestStatus>
 </template>
 
 <style lang="less">

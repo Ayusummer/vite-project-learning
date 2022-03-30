@@ -10,11 +10,13 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "gsap": "^3.9.1",
+    "lodash": "^4.17.21",
     "pinia": "^2.0.11",
     "vue": "^3.2.25",
     "webpack": "^5.70.0"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.181",
     "@vitejs/plugin-vue": "^2.2.0",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
