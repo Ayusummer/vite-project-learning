@@ -20,6 +20,7 @@ import TransitionGroupTest from './components/transition_group/transition_group_
 import TransitionGroupTestFLIP from './components/transition_group/transition_group_test_flip.vue';
 import TransitionGroupTestStatus from './components/transition_group/transition_group_test_status.vue';
 import PIA from './components/ProvideInject/PI_A.vue';
+import BCTP_parent from './components/BrotherComponentsTransferParams/BCTP_parent.vue';
 </script>
 
 <template>
@@ -45,7 +46,8 @@ import PIA from './components/ProvideInject/PI_A.vue';
   <!-- <TransitionGroupTest></TransitionGroupTest> -->
   <!-- <TransitionGroupTestFLIP></TransitionGroupTestFLIP> -->
   <!-- <TransitionGroupTestStatus></TransitionGroupTestStatus> -->
-  <PIA></PIA>
+  <!-- <PIA></PIA> -->
+  <BCTP_parent></BCTP_parent>
 </template>
 
 <style lang="less">
