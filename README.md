@@ -18,4 +18,4 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 
 ## 相关涉及技术
 
-`vue3`, `vite`, `typescript`, `pinia`, `less`, `Animate.css`
+`vue3`, `vite`, `typescript`, `pinia`, `less`, `Animate.css`, `GreenSock`, `Lodash`, `VueUse`

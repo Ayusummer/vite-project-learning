@@ -23,6 +23,7 @@ import PIA from './components/ProvideInject/PI_A.vue';
 import BCTP_parent from './components/BrotherComponentsTransferParams/BCTP_parent.vue';
 import DialogVModelParent from './components/vuemodel/Dialog_parent.vue';
 import VueDirective from './components/VueDirective/VueDirective.vue';
+import DIYHook from './components/HookUse/DIYHook.vue';
 </script>
 
 <template>
@@ -51,7 +52,8 @@ import VueDirective from './components/VueDirective/VueDirective.vue';
   <!-- <PIA></PIA> -->
   <!-- <BCTP_parent></BCTP_parent> -->
   <!-- <DialogVModelParent></DialogVModelParent> -->
-  <VueDirective></VueDirective>
+  <!-- <VueDirective></VueDirective> -->
+  <DIYHook></DIYHook>
 </template>
 
 <style lang="less">
