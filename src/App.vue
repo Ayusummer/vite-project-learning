@@ -4,7 +4,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 import Marquee from './components/Marquee.vue';
 import VueOn from './components/vueon.vue';
-import VueModel from './components/vuemodel.vue';
+import VueModel from './components/vuemodel/vuemodel.vue';
 import VueBind from './components/vuebind.vue';
 import VueComputed from './components/vuecomputed.vue';
 import VueComputedT from './components/vuecomputedt_test.vue';
@@ -21,6 +21,7 @@ import TransitionGroupTestFLIP from './components/transition_group/transition_gr
 import TransitionGroupTestStatus from './components/transition_group/transition_group_test_status.vue';
 import PIA from './components/ProvideInject/PI_A.vue';
 import BCTP_parent from './components/BrotherComponentsTransferParams/BCTP_parent.vue';
+import DialogVModelParent from './components/vuemodel/Dialog_parent.vue';
 </script>
 
 <template>
@@ -47,7 +48,8 @@ import BCTP_parent from './components/BrotherComponentsTransferParams/BCTP_paren
   <!-- <TransitionGroupTestFLIP></TransitionGroupTestFLIP> -->
   <!-- <TransitionGroupTestStatus></TransitionGroupTestStatus> -->
   <!-- <PIA></PIA> -->
-  <BCTP_parent></BCTP_parent>
+  <!-- <BCTP_parent></BCTP_parent> -->
+  <DialogVModelParent></DialogVModelParent>
 </template>
 
 <style lang="less">

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import {reactive} from 'vue'
+import { reactive } from 'vue'
 
 type names = {
     name: string,
-    age:number
+    age: number
 }
 const data = reactive<names[]>([
     {
@@ -39,17 +39,17 @@ const data = reactive<names[]>([
 </template>
 
 <style lang="less" scoped>
-.header{
+.header {
     height: 100px;
     background: red;
     color: #fff;
 }
-.main{
+.main {
     height: 100px;
     background: green;
     color: #fff;
 }
-.footer{
+.footer {
     height: 100px;
     background: blue;
     color: #fff;

@@ -2,7 +2,7 @@
 import A from './A.vue'
 import B from './B.vue'
 import C from './C.vue'
-import Dialog from '../../components/Dialog.vue'
+import Dialog from '../../components/Dialog/Dialog.vue'
 // import Loading from '../../components/Loading/loading.vue' 异步化组件后就不能这样直接引入使用了
 // 引入登录组件
 import Login from '../../components/login/login.vue'
