@@ -22,6 +22,7 @@ import TransitionGroupTestStatus from './components/transition_group/transition_
 import PIA from './components/ProvideInject/PI_A.vue';
 import BCTP_parent from './components/BrotherComponentsTransferParams/BCTP_parent.vue';
 import DialogVModelParent from './components/vuemodel/Dialog_parent.vue';
+import VueDirective from './components/VueDirective/VueDirective.vue';
 </script>
 
 <template>
@@ -49,7 +50,8 @@ import DialogVModelParent from './components/vuemodel/Dialog_parent.vue';
   <!-- <TransitionGroupTestStatus></TransitionGroupTestStatus> -->
   <!-- <PIA></PIA> -->
   <!-- <BCTP_parent></BCTP_parent> -->
-  <DialogVModelParent></DialogVModelParent>
+  <!-- <DialogVModelParent></DialogVModelParent> -->
+  <VueDirective></VueDirective>
 </template>
 
 <style lang="less">
