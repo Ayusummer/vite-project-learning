@@ -4,6 +4,10 @@
 
 [学习随笔](https://github.com/Ayusummer/DailyNotes/blob/main/%E5%89%8D%E7%AB%AF/VUE/Vue.md)
 
+[Vue3_小满zs的博客-CSDN博客](https://blog.csdn.net/qq1195566313/category_11618172.html)
+
+[Vue3 + vite + Ts + pinia + 实战 + 源码 +全栈_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1dS4y1y7vd?p=1&spm_id_from=333.788.b_6d756c74695f70616765.1)
+
 ---
 
 This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
