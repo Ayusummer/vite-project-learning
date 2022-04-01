@@ -8,9 +8,9 @@ import VueModel from './components/vuemodel/vuemodel.vue';
 import VueBind from './components/vuebind.vue';
 import VueComputed from './components/vuecomputed.vue';
 import VueComputedT from './components/vuecomputedt_test.vue';
-import VueWatch from './components/vuewatch.vue';
-import Vuewatch from './components/vuewatch.vue';
-import Vuewatcheffect from './components/vuewatcheffect.vue';
+import VueWatch from './components/VueWatch/vuewatch.vue';
+import Vuewatch from './components/VueWatch/vuewatch.vue';
+import Vuewatcheffect from './components/VueWatch/vuewatcheffect.vue';
 import lessLayout from './layout_less/less_layout.vue';
 import TransitionTest from './components/transition/transition_test.vue';
 import TransitionTestGsap from './components/transition/transition_test_gsap.vue';
@@ -24,6 +24,8 @@ import BCTP_parent from './components/BrotherComponentsTransferParams/BCTP_paren
 import DialogVModelParent from './components/vuemodel/Dialog_parent.vue';
 import VueDirective from './components/VueDirective/VueDirective.vue';
 import DIYHook from './components/HookUse/DIYHook.vue';
+import StringFilterTest from './components/VueGlobalProperties/stringFilterTest.vue';
+import WatchEffectTest2Vue from './components/VueWatch/WatchEffectTest2.vue';
 </script>
 
 <template>
@@ -41,6 +43,7 @@ import DIYHook from './components/HookUse/DIYHook.vue';
   <!-- <VueComputedT /> -->
   <!-- <Vuewatch /> -->
   <!-- <vuewatcheffect /> -->
+
   <!-- <lessLayout /> -->
   <!-- <Card content="此处为内容区域 233333" /> -->
   <!-- <TransitionTest></TransitionTest> -->
@@ -53,7 +56,9 @@ import DIYHook from './components/HookUse/DIYHook.vue';
   <!-- <BCTP_parent></BCTP_parent> -->
   <!-- <DialogVModelParent></DialogVModelParent> -->
   <!-- <VueDirective></VueDirective> -->
-  <DIYHook></DIYHook>
+  <!-- <DIYHook></DIYHook> -->
+  <StringFilterTest></StringFilterTest>
+  <!-- <WatchEffectTest2Vue></WatchEffectTest2Vue> -->
 </template>
 
 <style lang="less">
