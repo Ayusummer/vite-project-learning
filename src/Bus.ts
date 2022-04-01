@@ -1,3 +1,4 @@
+// 发布订阅模式的 bus, 可用于兄弟组件传参
 type BusClass<T> = {
     emit: (name: T) => void
     on: (name: T, callback: Function) => void
