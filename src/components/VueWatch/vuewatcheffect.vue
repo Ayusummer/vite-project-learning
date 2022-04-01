@@ -19,9 +19,7 @@ const stop = watchEffect((oninvalidate) => {
     onTrigger: (e) => {
         debugger
     }
-}
-
-);
+});
 
 const stopWatch = () => stop()
 
