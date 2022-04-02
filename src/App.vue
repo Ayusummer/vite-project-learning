@@ -26,6 +26,7 @@ import VueDirective from './components/VueDirective/VueDirective.vue';
 import DIYHook from './components/HookUse/DIYHook.vue';
 import StringFilterTest from './components/VueGlobalProperties/stringFilterTest.vue';
 import WatchEffectTest2Vue from './components/VueWatch/WatchEffectTest2.vue';
+import AnotherLoadingTest from './components/AnotherLoading/AnotherLoadingTest.vue'
 </script>
 
 <template>
@@ -43,7 +44,6 @@ import WatchEffectTest2Vue from './components/VueWatch/WatchEffectTest2.vue';
   <!-- <VueComputedT /> -->
   <!-- <Vuewatch /> -->
   <!-- <vuewatcheffect /> -->
-
   <!-- <lessLayout /> -->
   <!-- <Card content="此处为内容区域 233333" /> -->
   <!-- <TransitionTest></TransitionTest> -->
@@ -57,8 +57,9 @@ import WatchEffectTest2Vue from './components/VueWatch/WatchEffectTest2.vue';
   <!-- <DialogVModelParent></DialogVModelParent> -->
   <!-- <VueDirective></VueDirective> -->
   <!-- <DIYHook></DIYHook> -->
-  <StringFilterTest></StringFilterTest>
+  <!-- <StringFilterTest></StringFilterTest> -->
   <!-- <WatchEffectTest2Vue></WatchEffectTest2Vue> -->
+  <AnotherLoadingTest></AnotherLoadingTest>
 </template>
 
 <style lang="less">
