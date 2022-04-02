@@ -27,6 +27,8 @@ import DIYHook from './components/HookUse/DIYHook.vue';
 import StringFilterTest from './components/VueGlobalProperties/stringFilterTest.vue';
 import WatchEffectTest2Vue from './components/VueWatch/WatchEffectTest2.vue';
 import AnotherLoadingTest from './components/AnotherLoading/AnotherLoadingTest.vue'
+import Test from './components/test.vue'
+import FormTestVue from './components/ElementPlusTest/FormTest.vue';
 </script>
 
 <template>
@@ -59,7 +61,9 @@ import AnotherLoadingTest from './components/AnotherLoading/AnotherLoadingTest.v
   <!-- <DIYHook></DIYHook> -->
   <!-- <StringFilterTest></StringFilterTest> -->
   <!-- <WatchEffectTest2Vue></WatchEffectTest2Vue> -->
-  <AnotherLoadingTest></AnotherLoadingTest>
+  <!-- <AnotherLoadingTest></AnotherLoadingTest> -->
+  <!-- <Test></Test> -->
+  <FormTestVue></FormTestVue>
 </template>
 
 <style lang="less">

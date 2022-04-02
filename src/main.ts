@@ -3,10 +3,13 @@ import App from './App.vue'
 import './assets/css/reset.less'
 import Card from './components/Card.vue'
 import AnotherLoading from './components/AnotherLoading/AnotherLoading'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 
 // export const app = createApp(App)
 const app = createApp(App)
-
+// 使用 ElementPlus 插件
+app.use(ElementPlus)
 
 // 定义 Filter 类型, 作为 $filters 的返回类型
 type Filter = {
