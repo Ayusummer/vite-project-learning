@@ -29,6 +29,7 @@ import WatchEffectTest2Vue from './components/VueWatch/WatchEffectTest2.vue';
 import AnotherLoadingTest from './components/AnotherLoading/AnotherLoadingTest.vue'
 import Test from './components/test.vue'
 import FormTestVue from './components/ElementPlusTest/FormTest.vue';
+import ElementUIInputStyleTest from './components/ScopedDeepTest/ELementUIInputStyleChange.vue'
 </script>
 
 <template>
@@ -62,8 +63,9 @@ import FormTestVue from './components/ElementPlusTest/FormTest.vue';
   <!-- <StringFilterTest></StringFilterTest> -->
   <!-- <WatchEffectTest2Vue></WatchEffectTest2Vue> -->
   <!-- <AnotherLoadingTest></AnotherLoadingTest> -->
-  <!-- <Test></Test> -->
-  <FormTestVue></FormTestVue>
+<!--   <Test></Test>-->
+<!--  <FormTestVue></FormTestVue>-->
+  <ElementUIInputStyleTest></ElementUIInputStyleTest>
 </template>
 
 <style lang="less">
