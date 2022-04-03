@@ -30,6 +30,7 @@ import AnotherLoadingTest from './components/AnotherLoading/AnotherLoadingTest.v
 import Test from './components/test.vue'
 import FormTestVue from './components/ElementPlusTest/FormTest.vue';
 import ElementUIInputStyleTest from './components/ScopedDeepTest/ELementUIInputStyleChange.vue'
+import PiniaTest from '@/components/PiniaTest/PiniaTest.vue'
 </script>
 
 <template>
@@ -63,9 +64,10 @@ import ElementUIInputStyleTest from './components/ScopedDeepTest/ELementUIInputS
   <!-- <StringFilterTest></StringFilterTest> -->
   <!-- <WatchEffectTest2Vue></WatchEffectTest2Vue> -->
   <!-- <AnotherLoadingTest></AnotherLoadingTest> -->
-<!--   <Test></Test>-->
-<!--  <FormTestVue></FormTestVue>-->
-  <ElementUIInputStyleTest></ElementUIInputStyleTest>
+  <!--   <Test></Test>-->
+  <!-- <FormTestVue></FormTestVue> -->
+  <!-- <ElementUIInputStyleTest></ElementUIInputStyleTest> -->
+  <PiniaTest></PiniaTest>
 </template>
 
 <style lang="less">

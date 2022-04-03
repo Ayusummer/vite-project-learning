@@ -27,7 +27,7 @@ type ALP = {
     hide: () => void
 }
 
-// 添加声明
+// 添加声明, 声明全局属性
 declare module '@vue/runtime-core' {
     export interface ComponentCustomProperties {
         $filters: Filter,
