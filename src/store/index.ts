@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
-import { Names} from './store-name'
+import { Names } from './store-name'
+import { studentStore } from './student'
 
 export const useTestStore = defineStore(Names.TEST, {
     // state 存储全局状态
@@ -19,5 +20,9 @@ export const useTestStore = defineStore(Names.TEST, {
         currentIncrement() {
             this.current++
         },
+        // 打印 studentStore 的 name
+        printStudentState() {
+            console.log(studentStore().stuNames)
+        }
     }
 })

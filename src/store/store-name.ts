@@ -1,3 +1,4 @@
 export const enum Names{
-    TEST = 'TEST'
+    TEST = 'TEST',
+    STUDENT = 'STUDENT'
 }
