@@ -32,7 +32,12 @@ export const userStore = defineStore(Names.USER, {
     },
     // computed like, 修饰一些值, 用于监视(计算)状态变化, 有缓存的功能
     getters: {
-
+        newName(): string {
+            return `$ - 名: ${this.name} - 年龄: ${this.getUserAge}`
+        },
+        getUserAge(): number {
+            return this.user.age
+        }
     },
     // methods, 可做同步异步, 提交state(用于修改 state 全局状态数据)
     actions: {

@@ -92,7 +92,7 @@ const useTestChange5 = () => {
             </template>
             <p>actions-user: {{ userTest.user }}</p>
             <p>actions-name: {{ userTest.name }}</p>
-            <p>getters:</p>
+            <p>getters: {{ userTest.newName }}</p>
             <el-button @click="changeUserByAction">通过 action 修改 user</el-button>
             <el-button @click="changeUserByActionAsync">通过 action 异步修改 user</el-button>
         </el-card>
