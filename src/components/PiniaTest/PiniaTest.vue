@@ -86,11 +86,16 @@ const useTestChange5 = () => {
         </el-card>
     </div>
     <div>
-        <p>actions-user: {{ userTest.user }}</p>
-        <p>actions-name: {{ userTest.name }}</p>
-        <p>getters:</p>
-        <button @click="changeUserByAction">通过 action 修改 user</button>
-        <button @click="changeUserByActionAsync">通过 action 异步修改 user</button>
+        <el-card class="box-card">
+            <template #header>
+                <div class="card-header">actions 同/异步写法, getters 测试</div>
+            </template>
+            <p>actions-user: {{ userTest.user }}</p>
+            <p>actions-name: {{ userTest.name }}</p>
+            <p>getters:</p>
+            <el-button @click="changeUserByAction">通过 action 修改 user</el-button>
+            <el-button @click="changeUserByActionAsync">通过 action 异步修改 user</el-button>
+        </el-card>
     </div>
 </template>
 
