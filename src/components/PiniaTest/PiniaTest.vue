@@ -14,6 +14,20 @@ import {
 } from '@element-plus/icons-vue'
 
 const userTest = userStore()
+
+// 当有 action 执行时便会执行 $onAction 函数
+userTest.$onAction((args) => {
+    console.log("有 action 执行了 ↓")
+    console.log(args)
+    console.log("有 action 执行了 ↑")
+})
+
+// 通过 $subscribe 订阅 state 的改变
+userTest.$subscribe((args, state) => {
+    console.log(args)
+    console.log('userTest state:', state)
+})
+
 // 调用 userTest 中的 setUser 函数设置 user
 const changeUserByAction = () => {
     userTest.setUser()
@@ -66,37 +80,52 @@ const useTestChange5 = () => {
 </script>
 
 <template>
-    <div>
-        <el-card class="box-card">
-            <template #header>
-                <div class="card-header">基础 state 修改测试, actions 测试</div>
-            </template>
-            <el-row>pinia: {{ useTest.name }} -- ${{ useTest.current }}</el-row>
-            <el-row>直接解构: name: {{ name }} --- current: {{ current }} --- 不具有响应式特性</el-row>
-            <el-row>通过 storeToRefs 解构: name: {{ nameRef }} --- current: {{ currentRef }} --- 具有响应式特性</el-row>
-            <el-row>
-                <el-button type="primary" @click="useTestChange1">increment-直接修改属性值</el-button>
-                <el-button type="primary" @click="useTestChange2">通过$patch批量修改属性</el-button>
-                <el-button type="primary" @click="useTestChange3">$patch的函数式写法</el-button>
-            </el-row>
-            <el-row>
-                <el-button type="primary" @click="useTestChange4">通过原始对象修改整个实例</el-button>
-                <el-button type="primary" @click="useTestChange5">通过 actions 修改 current++</el-button>
-            </el-row>
-        </el-card>
-    </div>
-    <div>
-        <el-card class="box-card">
-            <template #header>
-                <div class="card-header">actions 同/异步写法, getters 测试</div>
-            </template>
-            <p>actions-user: {{ userTest.user }}</p>
-            <p>actions-name: {{ userTest.name }}</p>
-            <p>getters: {{ userTest.newName }}</p>
-            <el-button @click="changeUserByAction">通过 action 修改 user</el-button>
-            <el-button @click="changeUserByActionAsync">通过 action 异步修改 user</el-button>
-        </el-card>
-    </div>
+    <el-scrollbar>
+        <div>
+            <!-- PInia API 测试 -->
+            <el-card class="box-card">
+                <template #header>
+                    <div class="card-header">PInia API 测试</div>
+                </template>
+                <el-row>
+                    <el-button @click="userTest.$reset()">通过 $reset 重置 userTest 到初始状态</el-button>
+                </el-row>
+            </el-card>
+        </div>
+        <!-- actions 同/异步写法, getters 测试 -->
+        <div>
+            <el-card class="box-card">
+                <template #header>
+                    <div class="card-header">actions 同/异步写法, getters 测试</div>
+                </template>
+                <p>actions-user: {{ userTest.user }}</p>
+                <p>actions-name: {{ userTest.name }}</p>
+                <p>getters: {{ userTest.newName }}</p>
+                <el-button @click="changeUserByAction">通过 action 修改 user</el-button>
+                <el-button @click="changeUserByActionAsync">通过 action 异步修改 user</el-button>
+            </el-card>
+        </div>
+        <!-- 基础 state 修改测试, actions 测试 -->
+        <div>
+            <el-card class="box-card">
+                <template #header>
+                    <div class="card-header">基础 state 修改测试, actions 测试</div>
+                </template>
+                <el-row>pinia: {{ useTest.name }} -- ${{ useTest.current }}</el-row>
+                <el-row>直接解构: name: {{ name }} --- current: {{ current }} --- 不具有响应式特性</el-row>
+                <el-row>通过 storeToRefs 解构: name: {{ nameRef }} --- current: {{ currentRef }} --- 具有响应式特性</el-row>
+                <el-row>
+                    <el-button type="primary" @click="useTestChange1">increment-直接修改属性值</el-button>
+                    <el-button type="primary" @click="useTestChange2">通过$patch批量修改属性</el-button>
+                    <el-button type="primary" @click="useTestChange3">$patch的函数式写法</el-button>
+                </el-row>
+                <el-row>
+                    <el-button type="primary" @click="useTestChange4">通过原始对象修改整个实例</el-button>
+                    <el-button type="primary" @click="useTestChange5">通过 actions 修改 current++</el-button>
+                </el-row>
+            </el-card>
+        </div>
+    </el-scrollbar>
 </template>
 
 <style lang="less" scoped>
