@@ -8,13 +8,13 @@ import Dialog from '../../components/Dialog/Dialog.vue'
 import Login from '../../components/login/login.vue'
 // 引入注册组件
 import Register from '../../components/register/register.vue'
-import {reactive, markRaw, ref, defineAsyncComponent} from 'vue'
+import { reactive, markRaw, ref, defineAsyncComponent } from 'vue'
 
 const Loading = defineAsyncComponent(() => import('../../components/Loading/loading.vue'))
 
 type Tabs = {
     name: string,
-    comName:any
+    comName: any
 }
 
 type Com = Pick<Tabs, 'comName'>
@@ -39,7 +39,7 @@ let current = reactive<Com>({
     comName: data[0].comName
 })
 
-const switchCom =(item: Tabs) =>{
+const switchCom = (item: Tabs) => {
     current.comName = item.comName
 }
 
@@ -60,10 +60,8 @@ const switchLoginRegist = () => {
             <Login v-if="flag"></Login>
             <Register v-else></Register>
         </keep-alive>
-        <teleport to='.teleport_class_test'>
-            <div class="loading">
-                loading...
-            </div>
+        <teleport to=".teleport_class_test">
+            <div class="loading">loading...</div>
         </teleport>
         <!-- 异步组件测试 -->
         <Suspense>
@@ -78,41 +76,27 @@ const switchLoginRegist = () => {
         <Dialog>
             <!-- 具名插槽 -->
             <template v-slot:dialog_header>
-                <div>
-                    摆
-                </div>
+                <div>摆</div>
             </template>
             <!-- 匿名插槽 -->
             <!-- <template v-slot="{data}"> -->
             <!-- 简写: -->
-            <template #default="{data}">
-                <div>
-                    姓名: {{data.name}} 年龄: {{data.age}}
-                </div>
+            <template #default="{ data }">
+                <div>姓名: {{ data.name }} 年龄: {{ data.age }}</div>
             </template>
             <!-- 具名插槽 -->
             <!-- 简写: -->
             <template #dialog_footer>
-                <div>
-                    摸了
-                </div>
+                <div>摸了</div>
             </template>
             <!-- 动态插槽 -->
-            <template #[name]>
-                动态插槽演示
-            </template>
+            <template #[name]>动态插槽演示</template>
         </Dialog>
-        <div class = "tab">
-            <div :key="item.name" v-for="item in data"
-                @click="switchCom(item)">
-                {{item.name}}
-            </div>
+        <div class="tab">
+            <div :key="item.name" v-for="item in data" @click="switchCom(item)">{{ item.name }}</div>
         </div>
         <component :is="current.comName" />
-        <div class="content_layout-items" 
-            :key="item" v-for="item in 100">
-                {{ item }}
-        </div>      
+        <div class="content_layout-items" :key="item" v-for="item in 100">{{ item }}</div>
     </div>
 </template>
 
@@ -128,22 +112,22 @@ const switchLoginRegist = () => {
     }
 }
 
-.tab{
+.tab {
     display: flex;
-    flex:1;
+    flex: 1;
     flex-direction: row;
-    div{
+    div {
         flex: 1;
         padding: 10px;
         border: 1px solid #ccc;
         cursor: pointer;
-        &:hover{
+        &:hover {
             background: #eee;
         }
     }
 }
 
-.loading{
+.loading {
     position: absolute;
     right: 10px;
     top: 10px;

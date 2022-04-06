@@ -31,6 +31,8 @@ import Test from './components/test.vue'
 import FormTestVue from './components/ElementPlusTest/FormTest.vue';
 import ElementUIInputStyleTest from './components/ScopedDeepTest/ELementUIInputStyleChange.vue'
 import PiniaTest from '@/components/PiniaTest/PiniaTest.vue'
+import ElemntBackTopTestVue from './components/ElementPlusTest/ElemntBackTopTest.vue';
+import ElementBackTopTest from './components/ElementPlusTest/ElemntBackTopTest.vue';
 </script>
 
 <template>
@@ -68,6 +70,7 @@ import PiniaTest from '@/components/PiniaTest/PiniaTest.vue'
   <!-- <FormTestVue></FormTestVue> -->
   <!-- <ElementUIInputStyleTest></ElementUIInputStyleTest> -->
   <PiniaTest></PiniaTest>
+  <!-- <ElementBackTopTest></ElementBackTopTest> -->
 </template>
 
 <style lang="less">

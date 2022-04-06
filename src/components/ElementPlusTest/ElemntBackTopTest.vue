@@ -80,13 +80,8 @@ const useTestChange5 = () => {
 </script>
 
 <template>
-    <el-scrollbar>
-        <el-backtop
-            target=".page-component__scroll, .el-scrollbar__wrap"
-            :right="40"
-            :bottom="40"
-            :visibility-height="40"
-        >UP</el-backtop>
+    <div class="box">
+        <el-backtop target=".box" :right="40" :bottom="40" :visibility-height="1">UP</el-backtop>
         <!-- 用于占位的 card -->
         <div>
             <el-card class="box-card">
@@ -158,10 +153,15 @@ const useTestChange5 = () => {
                 </el-row>
             </el-card>
         </div>
-    </el-scrollbar>
+    </div>
 </template>
 
 <style lang="less" scoped>
+.box {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 .card-header {
     // 文字居中
     text-align: center;
