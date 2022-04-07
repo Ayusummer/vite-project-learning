@@ -85,35 +85,8 @@ const useTestChange5 = () => {
             target=".page-component__scroll, .el-scrollbar__wrap"
             :right="40"
             :bottom="40"
-            :visibility-height="40"
+            :visibility-height="1"
         >UP</el-backtop>
-        <!-- 用于占位的 card -->
-        <div>
-            <el-card class="box-card">
-                <template #header>
-                    <div class="card-header">用于占位的 card</div>
-                </template>
-                用于占位的 card
-            </el-card>
-        </div>
-        <!-- 用于占位的 card -->
-        <div>
-            <el-card class="box-card">
-                <template #header>
-                    <div class="card-header">用于占位的 card</div>
-                </template>
-                用于占位的 card
-            </el-card>
-        </div>
-        <!-- 用于占位的 card -->
-        <div>
-            <el-card class="box-card">
-                <template #header>
-                    <div class="card-header">用于占位的 card</div>
-                </template>
-                用于占位的 card
-            </el-card>
-        </div>
         <!-- PInia API 测试 -->
         <div>
             <el-card class="box-card">
