@@ -18,6 +18,7 @@ specifiers:
   typescript: ^4.5.4
   vite: ^2.8.0
   vue: ^3.2.25
+  vue-router: '4'
   vue-tsc: ^0.29.8
   webpack: ^5.71.0
 
@@ -31,6 +32,7 @@ dependencies:
   lodash: registry.npmmirror.com/lodash/4.17.21
   pinia: registry.npmmirror.com/pinia/2.0.13_typescript@4.6.3+vue@3.2.31
   vue: registry.npmmirror.com/vue/3.2.31
+  vue-router: registry.npmmirror.com/vue-router/4.0.14_vue@3.2.31
 
 devDependencies:
   '@types/lodash': registry.npmmirror.com/@types/lodash/4.14.181
@@ -2792,6 +2794,18 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
+      vue: registry.npmmirror.com/vue/3.2.31
+    dev: false
+
+  registry.npmmirror.com/vue-router/4.0.14_vue@3.2.31:
+    resolution: {integrity: sha512-wAO6zF9zxA3u+7AkMPqw9LjoUCjSxfFvINQj3E/DceTt6uEz1XZLraDhdg2EYmvVwTBSGlLYsUw8bDmx0754Mw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-router/-/vue-router-4.0.14.tgz}
+    id: registry.npmmirror.com/vue-router/4.0.14
+    name: vue-router
+    version: 4.0.14
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': registry.npmmirror.com/@vue/devtools-api/6.1.4
       vue: registry.npmmirror.com/vue/3.2.31
     dev: false
 

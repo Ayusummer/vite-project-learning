@@ -16,7 +16,8 @@
     "gsap": "^3.9.1",
     "lodash": "^4.17.21",
     "pinia": "^2.0.13",
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.181",

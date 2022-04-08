@@ -69,8 +69,9 @@ import ElementBackTopTest from './components/ElementPlusTest/ElemntBackTopTest.v
   <!--   <Test></Test>-->
   <!-- <FormTestVue></FormTestVue> -->
   <!-- <ElementUIInputStyleTest></ElementUIInputStyleTest> -->
-  <PiniaTest></PiniaTest>
+  <!-- <PiniaTest></PiniaTest> -->
   <!-- <ElementBackTopTest></ElementBackTopTest> -->
+  <router-view></router-view>
 </template>
 
 <style lang="less">

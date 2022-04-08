@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { defineProps } from 'vue'
+// import { defineProps } from 'vue'
 
 defineProps<{ msg: string }>()
 
@@ -9,6 +9,10 @@ const count = ref(0)
 </script>
 
 <template>
+  <div class="vueLogo">
+    <img alt="Vue logo" src="@/assets/logo.png" />
+  </div>
+  <router-link to="/marquee">跑马灯组件跳转</router-link>
   <h1>{{ msg }}</h1>
   <p>
     Recommended IDE setup:

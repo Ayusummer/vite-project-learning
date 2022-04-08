@@ -6,6 +6,8 @@ import AnotherLoading from './components/AnotherLoading/AnotherLoading'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import { createPinia, PiniaPluginContext } from 'pinia'
+// 引入 vue-router
+import router from './router'
 
 
 type Options = {
@@ -46,6 +48,8 @@ const piniaPlugin = (options:Options) => {
 
 // export const app = createApp(App)
 const app = createApp(App)
+// 使用 router
+app.use(router)
 // 使用 ElementPlus 插件
 app.use(ElementPlus)
 
