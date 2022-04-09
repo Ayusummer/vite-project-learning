@@ -38,6 +38,9 @@ const stopMethod = (): void => {
 </script>
 
 <template>
+    <el-button>
+        <router-link to="/">HelloWorld</router-link>
+    </el-button>
     <!-- <p>{{ msg1 }}</p> -->
     <p>{{ msg }}</p>
     <input type="button" value="跑马灯走起" @click="startMethod" />

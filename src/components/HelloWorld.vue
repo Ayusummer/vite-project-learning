@@ -11,7 +11,9 @@ const count = ref(0)
   <div class="vueLogo">
     <img alt="Vue logo" src="@/assets/logo.png" />
   </div>
-  <router-link to="/marquee">跑马灯组件跳转</router-link>
+  <el-button>
+    <router-link to="/marquee">跑马灯组件跳转</router-link>
+  </el-button>
   <h1>{{ msg }}</h1>
   <p>
     Recommended IDE setup:
