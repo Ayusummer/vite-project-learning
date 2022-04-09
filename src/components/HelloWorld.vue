@@ -12,7 +12,9 @@ const count = ref(0)
     <img alt="Vue logo" src="@/assets/logo.png" />
   </div>
   <el-button>
-    <router-link to="/marquee">跑马灯组件跳转</router-link>
+    <router-link :to="{
+      name: 'marquee'
+    }">跑马灯组件跳转</router-link>
   </el-button>
   <h1>{{ msg }}</h1>
   <p>

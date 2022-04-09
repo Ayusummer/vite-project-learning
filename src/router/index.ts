@@ -6,9 +6,11 @@ import { createRouter, createWebHistory, createWebHashHistory, createMemoryHisto
 // 每个路由都需要映射到一个组件。
 const routes: Array<RouteRecordRaw> = [{
     path: '/',
+    name: 'helloWorld',
     component: () => import('../components/HelloWorld.vue')
 }, {
     path: '/marquee',
+    name: 'marquee',
     component: () => import('../components/Marquee.vue')
 }]
 
