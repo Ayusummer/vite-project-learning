@@ -71,25 +71,24 @@ import ElementBackTopTest from './components/ElementPlusTest/ElemntBackTopTest.v
   <!-- <ElementUIInputStyleTest></ElementUIInputStyleTest> -->
   <!-- <PiniaTest></PiniaTest> -->
   <!-- <ElementBackTopTest></ElementBackTopTest> -->
-  <router-view></router-view>
+  <router-view>
+    </router-view>
 </template>
 
-<style lang="less">
-html,
+<style lang="less">html,
 body,
 #app {
   // font-family: Avenir, Helvetica, Arial, sans-serif;
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
   // text-align: center;
-  color: #2c3e50;
+  // color: #2c3e50;
   // margin-top: 60px;
   height: 100%;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .vueLogo {
   height: 40%;
   border: 1px solid #ccc;
-}
-</style>
+}</style>

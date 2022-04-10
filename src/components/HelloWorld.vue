@@ -38,12 +38,21 @@ const back = (): void => {
   router.back()
   // 或者 router.go(-1)
 }
+
+// 返回 navigation 界面
+const backToNavigation = (): void => {
+  router.push({
+    name: 'navigation'
+  })
+}
 </script>
 
 <template>
   <div class="vueLogo">
     <img alt="Vue logo" src="@/assets/logo.png" />
   </div>
+  <!-- 返回 navigation 界面 -->
+  <el-button @click="backToNavigation">返回 navigation 界面</el-button>
   <el-button>
     <router-link :to="{
       name: 'marquee'

@@ -46,9 +46,19 @@ const back = (): void => {
     router.back()
     // 或者 router.go(-1)
 }
+
+// 返回 navigation 界面
+const backToNavigation = (): void => {
+    router.push({
+        name: 'navigation'
+    })
+}
+
+
 </script>
 
 <template>
+    <el-button @click="backToNavigation">返回 navigation 界面</el-button>
     <el-button>
         <router-link to="/">HelloWorld</router-link>
     </el-button>
