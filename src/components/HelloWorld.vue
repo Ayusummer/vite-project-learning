@@ -21,6 +21,23 @@ const switchToMarquee_object = (): void => {
     }
   })
 }
+
+// 不留示例记录跳转
+const switchToMarquee_no_record = (): void => {
+  router.replace('/marquee')
+}
+
+// 前进 1 级界面
+const forward = (): void => {
+  router.forward()
+  // 或者 router.go(1)
+}
+
+// 回退 1 级界面
+const back = (): void => {
+  router.back()
+  // 或者 router.go(-1)
+}
 </script>
 
 <template>
@@ -40,6 +57,12 @@ const switchToMarquee_object = (): void => {
   <el-button @click="switchToMarquee">使用router.push跳转到跑马灯</el-button>
   <!-- router.push 传对象 -->
   <el-button @click="switchToMarquee_object">使用router.push传对象跳转到跑马灯</el-button>
+  <!-- 不留历史记录跳转 -->
+  <el-button @click="switchToMarquee_no_record">不留历史记录跳转到跑马灯</el-button>
+  <!-- 前进 1 级界面 -->
+  <el-button @click="forward">前进 1 级界面</el-button>
+  <!-- 回退 1 级界面 -->
+  <el-button @click="back">回退 1 级界面</el-button>
 
   <!-- 示例内容区域 -->
   <div class="hello_msg">
@@ -72,8 +95,7 @@ const switchToMarquee_object = (): void => {
 </template>
 
 <!-- 在<style>标签中使用 scoped 属性会限制样式只影响 <style> 标签的父元素和它所有的后代元素。 -->
-<style scoped>
-.hello_msg {
+<style scoped>.hello_msg {
   text-align: center;
 }
 
@@ -97,5 +119,4 @@ code {
   padding: 2px 4px;
   border-radius: 4px;
   color: #304455;
-}
-</style>
+}</style>

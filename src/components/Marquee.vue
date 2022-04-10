@@ -1,6 +1,7 @@
 <!-- 跑马灯组件 -->
 <script setup lang="ts">
 import { ref } from 'vue'
+import router from '@/router'
 
 // let props = defineProps({
 //     msg1: String
@@ -34,7 +35,17 @@ const stopMethod = (): void => {
     interval_id = 0;
 }
 
+// 前进 1 级界面
+const forward = (): void => {
+    router.forward()
+    // 或者 router.go(1)
+}
 
+// 回退 1 级界面
+const back = (): void => {
+    router.back()
+    // 或者 router.go(-1)
+}
 </script>
 
 <template>
@@ -45,7 +56,10 @@ const stopMethod = (): void => {
     <p>{{ msg }}</p>
     <input type="button" value="跑马灯走起" @click="startMethod" />
     <input type="button" value="跑马灯停止" @click="stopMethod" />
+    <!-- 前进 1 级界面 -->
+    <el-button @click="forward">前进 1 级界面</el-button>
+    <!-- 回退 1 级界面 -->
+    <el-button @click="back">回退 1 级界面</el-button>
 </template>
 
-<style>
-</style> 
+<style></style> 
