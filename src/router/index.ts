@@ -4,15 +4,32 @@ import { createRouter, createWebHistory, createWebHashHistory, createMemoryHisto
 //路由数组的类型 RouteRecordRaw
 // 定义一些路由
 // 每个路由都需要映射到一个组件。
-const routes: Array<RouteRecordRaw> = [{
-    path: '/',
+const routes: Array<RouteRecordRaw> = [
+    {
+        path: "/",
+        name: "navigation",
+        component: () => import("@/components/Navigation/Navigation.vue")
+},
+    {
+    path: '/helloworld',
     name: 'helloWorld',
     component: () => import('../components/HelloWorld.vue')
 }, {
     path: '/marquee',
     name: 'marquee',
     component: () => import('../components/Marquee.vue')
-}]
+    },
+    {
+        path: '/goodsWarehouse',
+        name: 'goodsWarehouse',
+        component: () => import('@/components/GoodsWarehouse/GoodsWarehouse.vue')
+    },
+    {
+        path: '/goodInfo',
+        name: 'goodInfo',
+        component: () => import('@/components/GoodsWarehouse/GoodInfo.vue')
+    }
+]
 
 // 创建 router
 const router = createRouter({
