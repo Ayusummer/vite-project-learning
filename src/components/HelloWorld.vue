@@ -104,7 +104,8 @@ const backToNavigation = (): void => {
 </template>
 
 <!-- 在<style>标签中使用 scoped 属性会限制样式只影响 <style> 标签的父元素和它所有的后代元素。 -->
-<style scoped>.hello_msg {
+<style scoped>
+.hello_msg {
   text-align: center;
 }
 
@@ -128,4 +129,5 @@ code {
   padding: 2px 4px;
   border-radius: 4px;
   color: #304455;
-}</style>
+}
+</style>
