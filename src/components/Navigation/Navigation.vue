@@ -24,7 +24,8 @@ const switchToMarquee = (): void => {
         <el-button @click="switchToHelloWorld">跳转到 helloWorld 组件</el-button>
         <el-button @click="switchToMarquee">跳转到 marquee 组件</el-button>
         <el-button @click="router.push('/goodsWarehouse')">跳转到商品货仓界面</el-button>
-</div>
+    </div>
 </template>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+</style>

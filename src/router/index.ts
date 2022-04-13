@@ -24,8 +24,13 @@ const routes: Array<RouteRecordRaw> = [
         name: 'goodsWarehouse',
         component: () => import('@/components/GoodsWarehouse/GoodsWarehouse.vue')
     },
+    // {
+    //     path: '/goodInfo',
+    //     name: 'goodInfo',
+    //     component: () => import('@/components/GoodsWarehouse/GoodInfo.vue')
+    // },
     {
-        path: '/goodInfo',
+        path: '/goodInfo/:id',
         name: 'goodInfo',
         component: () => import('@/components/GoodsWarehouse/GoodInfo.vue')
     }
