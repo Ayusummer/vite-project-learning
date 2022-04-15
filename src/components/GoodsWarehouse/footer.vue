@@ -8,9 +8,9 @@ import router from '@/router'
             <div class="card-header">我是父路由</div>
             <div class="card-header">
                 <!-- 跳转到货仓主界面 -->
-                <el-button @click="router.push('/goodsWarehouse')">返回货仓主界面</el-button>
+                <el-button @click="router.push('')">返回货仓主界面</el-button>
                 <!-- 前往商品1详情页 -->
-                <el-button @click="router.push('/goodInfo/1')">前往商品1详情页</el-button>
+                <el-button @click="router.push('/goodsWarehouse/goodInfo/1')">前往商品1详情页</el-button>
             </div>
         </template>
         <router-view></router-view>
