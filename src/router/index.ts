@@ -9,15 +9,16 @@ const routes: Array<RouteRecordRaw> = [
         path: "/",
         name: "navigation",
         component: () => import("@/components/Navigation/Navigation.vue")
-},
+    },
     {
-    path: '/helloworld',
-    name: 'helloWorld',
-    component: () => import('../components/HelloWorld.vue')
-}, {
-    path: '/marquee',
-    name: 'marquee',
-    component: () => import('../components/Marquee.vue')
+        path: '/helloworld',
+        name: 'helloWorld',
+        component: () => import('../components/HelloWorld.vue')
+    },
+    {
+        path: '/marquee',
+        name: 'marquee',
+        component: () => import('../components/Marquee.vue')
     },
     {
         path: '/goodsWarehouse',
@@ -31,7 +32,7 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/components/GoodsWarehouse/GoodsWarehouse.vue')
             },
             {
-                path: '/goodInfo/:id',
+                path: 'goodInfo/:id',
                 name: 'goodInfo',
                 component: () => import('@/components/GoodsWarehouse/GoodInfo.vue')
             }
@@ -42,6 +43,11 @@ const routes: Array<RouteRecordRaw> = [
         // },
         ]
     },
+    // {
+    //     path: '/',
+    //     name: 'home',
+    //     component: () => import('@/components/Home.vue')
+    // }
 ]
 
 // 创建 router
