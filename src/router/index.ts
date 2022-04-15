@@ -22,18 +22,26 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/goodsWarehouse',
         name: 'goodsWarehouse',
-        component: () => import('@/components/GoodsWarehouse/GoodsWarehouse.vue')
+        component: () => import('@/components/GoodsWarehouse/footer.vue'),
+        children: [
+            {
+                // path 设为空默认显示该子路由页面
+                path: '',
+                name: 'goodsWarehouseMain',
+                component: () => import('@/components/GoodsWarehouse/GoodsWarehouse.vue')
+            },
+            {
+                path: '/goodInfo/:id',
+                name: 'goodInfo',
+                component: () => import('@/components/GoodsWarehouse/GoodInfo.vue')
+            }
+        // {
+        //     path: '/goodInfo',
+        //     name: 'goodInfo',
+        //     component: () => import('@/components/GoodsWarehouse/GoodInfo.vue')
+        // },
+        ]
     },
-    // {
-    //     path: '/goodInfo',
-    //     name: 'goodInfo',
-    //     component: () => import('@/components/GoodsWarehouse/GoodInfo.vue')
-    // },
-    {
-        path: '/goodInfo/:id',
-        name: 'goodInfo',
-        component: () => import('@/components/GoodsWarehouse/GoodInfo.vue')
-    }
 ]
 
 // 创建 router
