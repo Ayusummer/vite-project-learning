@@ -43,11 +43,25 @@ const routes: Array<RouteRecordRaw> = [
         // },
         ]
     },
-    // {
-    //     path: '/',
-    //     name: 'home',
-    //     component: () => import('@/components/Home.vue')
-    // }
+    {
+        path: '/namedVIew',
+        name: 'namedView',
+        component: () => import('@/components/NamedViewsTest/root.vue'),
+        children: [{
+            path: "user1",
+            components: {
+                default: () => import('@/components/NamedViewsTest/A.vue'),
+            }
+        },
+            {
+                path: "user2",
+                components: {
+                    b: () => import('@/components/NamedViewsTest/B.vue'),
+                    c: () => import('@/components/NamedViewsTest/C.vue')
+                }
+            }
+        ]
+    }
 ]
 
 // 创建 router

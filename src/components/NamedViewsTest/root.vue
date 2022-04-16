@@ -2,9 +2,15 @@
 </script>
 
 <template>
-    <div>
-        Root
-    </div>
+    <!-- 返回主界面 -->
+    <el-button @click="$router.push('/')">返回主界面</el-button>
+    <!-- 跳转到 user1 -->
+    <el-button @click="$router.push('/namedView/user1')">跳转到 user1</el-button>
+    <!-- 跳转到 user2 -->
+    <el-button @click="$router.push('/namedView/user2')">跳转到 user2</el-button>
+    <router-view></router-view>
+    <router-view name="b"></router-view>
+    <router-view name="c"></router-view>
 </template>
 
 <style lang="less" scoped>

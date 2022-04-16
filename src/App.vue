@@ -36,10 +36,10 @@ import ElementBackTopTest from './components/ElementPlusTest/ElemntBackTopTest.v
 </script>
 
 <template>
+  <router-view></router-view>
   <!-- <div class="vueLogo">
     <img alt="Vue logo" src="./assets/logo.png" />
   </div>-->
-
   <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
   <!-- <HelloWorld msg="233" /> -->
   <!-- <Marquee /> -->
@@ -71,11 +71,10 @@ import ElementBackTopTest from './components/ElementPlusTest/ElemntBackTopTest.v
   <!-- <ElementUIInputStyleTest></ElementUIInputStyleTest> -->
   <!-- <PiniaTest></PiniaTest> -->
   <!-- <ElementBackTopTest></ElementBackTopTest> -->
-  <router-view>
-    </router-view>
 </template>
 
-<style lang="less">html,
+<style lang="less">
+html,
 body,
 #app {
   // font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -91,4 +90,5 @@ body,
 .vueLogo {
   height: 40%;
   border: 1px solid #ccc;
-}</style>
+}
+</style>
