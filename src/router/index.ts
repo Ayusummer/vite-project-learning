@@ -46,6 +46,22 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/namedVIew',
         name: 'namedView',
+        // 别名
+        alias: ['/namedView1', '/namedView2'],
+        // 字符串形式 redirect
+        redirect:'/namedView/user1',
+        // 对象形式 redirect
+        // redirect:{path:'/namedView/user1'},
+        // 函数形式 redirect
+        // redirect: to => {
+        //     // console.log("函数形式重定向")
+        //     return {
+        //         path: '/namedView/user1',
+        //         query: {
+        //             name: '233'
+        //         }
+        //     }
+        // },
         component: () => import('@/components/NamedViewsTest/root.vue'),
         children: [{
             path: "user1",
