@@ -102,3 +102,17 @@ const router = createRouter({
 
 //导出router
 export default router
+
+// 定义路由白名单
+const whiteList = ['/login', '/404', '/401', '/lock']
+
+//  使用导航守卫
+router.beforeEach((to, from, next) => {
+    // 若路由在白名单内或者已经登录(有token), 则放通
+    if (whiteList.indexOf(to.path) !== -1 || localStorage.getItem('token')) {
+        next()
+    } else {
+        // 否则跳转到登录页面
+        next('/login')
+    }
+})

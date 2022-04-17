@@ -6,59 +6,10 @@ import AnotherLoading from './components/AnotherLoading/AnotherLoading'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import { createPinia, PiniaPluginContext } from 'pinia'
+// 引入 piniaPlugin
+import piniaPlugin from '@/piniacfg'
 // 引入 vue-router
 import router from './router'
-
-// 定义路由白名单
-const whiteList = ['/login', '/404', '/401', '/lock']
-
-//  使用导航守卫
-router.beforeEach((to, from, next) => {
-    // 若路由在白名单内或者已经登录(有token), 则放通
-    if (whiteList.indexOf(to.path) !== -1 || localStorage.getItem('token')) {
-        next()
-    } else {
-        // 否则跳转到登录页面
-        next('/login')
-    }
-})
-
-
-type Options = {
-    key?: string
-}
-// 默认配置
-const __piniaKey__ = 'yusummer'
-
-// 将 key 存入 localstorage
-const setStorage = (key: string, value: any) => {
-    localStorage.setItem(key, JSON.stringify(value))
-}
-
-// 根据 key 从 localstorage 获取数据
-const getStorage = (key: string) => {
-    return localStorage.getItem(key) ? JSON.parse(localStorage.getItem(key) as string) : null
-}
-
-// 定义 pinia 插件
-const piniaPlugin = (options: Options) => {
-    return (context: PiniaPluginContext) => {
-        const { store } = context;
-        // 从 localstorage 获取数据
-        const data = getStorage(`${options.key ?? __piniaKey__}-${store.$id}`)
-        console.log(data)
-        // state 有变化时, 将数据存入 localstorage
-        store.$subscribe(() => {
-            setStorage(`${options.key ?? __piniaKey__}-${store.$id}`, toRaw(store.$state))
-        })
-
-        console.log("store", store)
-
-        return {
-            ...data
-        }
-    }
-}
 
 // export const app = createApp(App)
 const app = createApp(App)
