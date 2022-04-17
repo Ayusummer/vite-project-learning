@@ -36,19 +36,59 @@ import ElementBackTopTest from './components/ElementPlusTest/ElemntBackTopTest.v
 </script>
 
 <template>
-  <router-view></router-view>
+    <router-view></router-view>
+    <!-- <div class="vueLogo">
+    <img alt="Vue logo" src="./assets/logo.png" />
+  </div>-->
+    <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
+    <!-- <HelloWorld msg="233" /> -->
+    <!-- <Marquee /> -->
+    <!-- <VueOn /> -->
+    <!-- <VueModel /> -->
+    <!-- <VueBind /> -->
+    <!-- <VueComputed /> -->
+    <!-- <VueComputedT /> -->
+    <!-- <Vuewatch /> -->
+    <!-- <vuewatcheffect /> -->
+    <!-- <lessLayout /> -->
+    <!-- <Card content="此处为内容区域 233333" /> -->
+    <!-- <TransitionTest></TransitionTest> -->
+    <!-- <Transition_test_gsap></Transition_test_gsap> -->
+    <!-- <Transition_test_appear></Transition_test_appear> -->
+    <!-- <TransitionGroupTest></TransitionGroupTest> -->
+    <!-- <TransitionGroupTestFLIP></TransitionGroupTestFLIP> -->
+    <!-- <TransitionGroupTestStatus></TransitionGroupTestStatus> -->
+    <!-- <PIA></PIA> -->
+    <!-- <BCTP_parent></BCTP_parent> -->
+    <!-- <DialogVModelParent></DialogVModelParent> -->
+    <!-- <VueDirective></VueDirective> -->
+    <!-- <DIYHook></DIYHook> -->
+    <!-- <StringFilterTest></StringFilterTest> -->
+    <!-- <WatchEffectTest2Vue></WatchEffectTest2Vue> -->
+    <!-- <AnotherLoadingTest></AnotherLoadingTest> -->
+    <!--   <Test></Test>-->
+    <!-- <FormTestVue></FormTestVue> -->
+    <!-- <ElementUIInputStyleTest></ElementUIInputStyleTest> -->
+    <!-- <PiniaTest></PiniaTest> -->
+    <!-- <ElementBackTopTest></ElementBackTopTest> -->
 </template>
 
 <style lang="less">
 html,
 body,
 #app {
-  height: 100%;
-  overflow: hidden;
+    height: 100%;
+    overflow: hidden;
+    // font-family: Avenir, Helvetica, Arial, sans-serif;
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
+    // text-align: center;
+    // color: #2c3e50;
+    // margin-top: 60px;
 }
 
 .vueLogo {
-  height: 40%;
-  border: 1px solid #ccc;
+    height: 40%;
+    border: 1px solid #ccc;
 }
 </style>
