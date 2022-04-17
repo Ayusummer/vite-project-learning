@@ -10,6 +10,8 @@ import { createPinia, PiniaPluginContext } from 'pinia'
 import piniaPlugin from '@/piniacfg'
 // 引入 vue-router
 import router from './router'
+import { render, VNode } from 'vue'
+import LoadingBarVNode from '@/router'
 
 // export const app = createApp(App)
 const app = createApp(App)

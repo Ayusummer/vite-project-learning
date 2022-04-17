@@ -3,6 +3,7 @@ import { reactive, ref, Ref } from 'vue'
 import type { FormInstance, FormItemRule } from 'element-plus'
 import { ElMessage } from 'element-plus'
 import router from '@/router'
+import LoadingBar from '@/components/Loading/LoadingBar.vue'
 
 // 定义表单数据类型
 type FormData = {
@@ -66,6 +67,8 @@ const login = (): void => {
 </script>
 
 <template>
+    <!-- loadingbar 测试 -->
+    <!-- <LoadingBar></LoadingBar> -->
     <div class="login">
         <el-card class="box-card">
             <template #header>

@@ -1,5 +1,8 @@
 //引入路由对象
 import { createRouter, createWebHistory, createWebHashHistory, createMemoryHistory, RouteRecordRaw } from 'vue-router'
+import { createVNode, render, VNode } from 'vue'
+// 引入 LoadingBar
+import LoadingBar from '@/components/Loading/LoadingBar.vue'
 
 //路由数组的类型 RouteRecordRaw
 // 定义一些路由
@@ -100,14 +103,19 @@ const router = createRouter({
     routes
 })
 
-//导出router
-export default router
-
 // 定义路由白名单
 const whiteList = ['/login', '/404', '/401', '/lock']
 
-//  使用导航守卫
+// 将 LoadingBar 转成 VNode
+const LoadingBarVNode: VNode = createVNode(LoadingBar)
+console.log("LoadingBarVNode如下:", LoadingBarVNode);
+// 将 LoadingBarVNode 挂载到 body 上
+// render(LoadingBarVNode, document.body)
+
+//  使用导航守卫(前置守卫)
 router.beforeEach((to, from, next) => {
+    render(LoadingBarVNode, document.body)
+    LoadingBarVNode.component?.exposed?.startLoading()
     // 若路由在白名单内或者已经登录(有token), 则放通
     if (whiteList.indexOf(to.path) !== -1 || localStorage.getItem('token')) {
         next()
@@ -116,3 +124,12 @@ router.beforeEach((to, from, next) => {
         next('/login')
     }
 })
+
+// 使用后置钩子
+router.afterEach((to, from) => {
+    LoadingBarVNode.component?.exposed?.stopLoading()
+})
+
+
+//导出router
+export default router
