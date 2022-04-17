@@ -13,38 +13,60 @@ const routes: Array<RouteRecordRaw> = [
         path: '/',
         name: 'login',
         alias: '/login',
+        // 路由元信息
+        meta: {
+            title: '登录页面',
+        },
         component: () => import('@/views/NavigationGuardTest/login.vue'),
     },
     // 导航守卫测试主页面(需要登录才能访问)(导航界面)
     {
         path: "/navigation",
         name: "navigation",
+        meta: {
+            title: '组件导航页面'
+        },
         component: () => import("@/components/Navigation/Navigation.vue")
     },
     {
         path: '/helloworld',
         name: 'helloWorld',
+        meta: {
+            title: 'HelloWorld',
+        },
         component: () => import('../components/HelloWorld.vue')
     },
     {
         path: '/marquee',
         name: 'marquee',
+        meta: {
+            title: '跑马灯',
+        },
         component: () => import('../components/Marquee.vue')
     },
     {
         path: '/goodsWarehouse',
         name: 'goodsWarehouse',
+        meta: {
+            title: '商品仓库',
+        },
         component: () => import('@/components/GoodsWarehouse/footer.vue'),
         children: [
             {
                 // path 设为空默认显示该子路由页面
                 path: '',
                 name: 'goodsWarehouseMain',
+                meta: {
+                    title: '商品仓库主页面',
+                },
                 component: () => import('@/components/GoodsWarehouse/GoodsWarehouse.vue')
             },
             {
                 path: 'goodInfo/:id',
                 name: 'goodInfo',
+                meta: {
+                    title: '商品详情页面',
+                },
                 component: () => import('@/components/GoodsWarehouse/GoodInfo.vue')
             }
             // {
@@ -59,6 +81,9 @@ const routes: Array<RouteRecordRaw> = [
         name: 'namedView',
         // 别名
         alias: ['/namedView1', '/namedView2'],
+        meta: {
+            title: '命名视图',
+        },
         // 字符串形式 redirect
         redirect: '/namedView/user1',
         // 对象形式 redirect
@@ -76,12 +101,20 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/components/NamedViewsTest/root.vue'),
         children: [{
             path: "user1",
+            name: "user1",
+            meta: {
+                title: 'user1',
+            },
             components: {
                 default: () => import('@/components/NamedViewsTest/A.vue'),
             }
         },
         {
             path: "user2",
+            name: "user2",
+            meta: {
+                title: 'user2',
+            },
             components: {
                 b: () => import('@/components/NamedViewsTest/B.vue'),
                 c: () => import('@/components/NamedViewsTest/C.vue')
@@ -93,6 +126,9 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/test',
         name: 'test',
+        meta: {
+            title: '测试页面',
+        },
         component: () => import('@/components/test.vue')
     },
 ]
@@ -112,8 +148,17 @@ console.log("LoadingBarVNode如下:", LoadingBarVNode);
 // 将 LoadingBarVNode 挂载到 body 上
 // render(LoadingBarVNode, document.body)
 
+// 定义 meta 中的属性类型, 以免后面使用时报类型错误
+declare module 'vue-router' {
+    interface RouteMeta {
+        title: string
+    }
+}
+
 //  使用导航守卫(前置守卫)
 router.beforeEach((to, from, next) => {
+    document.title = to.meta.title
+    // 挂载 LoadingBar 到 body 上(折中做法)
     render(LoadingBarVNode, document.body)
     LoadingBarVNode.component?.exposed?.startLoading()
     // 若路由在白名单内或者已经登录(有token), 则放通
