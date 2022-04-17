@@ -30,7 +30,7 @@ const stopLoading = (): void => {
     //         dom.style.width = `${speed.value}%`
     //     })
     // }, 500)
-    console.log("233")
+    // console.log("233")
 }
 
 // onMounted(() => {
