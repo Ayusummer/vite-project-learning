@@ -77,14 +77,14 @@ import ElementBackTopTest from './components/ElementPlusTest/ElemntBackTopTest.v
 html,
 body,
 #app {
+  height: 100%;
+  overflow: hidden;
   // font-family: Avenir, Helvetica, Arial, sans-serif;
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
   // text-align: center;
   // color: #2c3e50;
   // margin-top: 60px;
-  height: 100%;
-  // overflow: hidden;
 }
 
 .vueLogo {

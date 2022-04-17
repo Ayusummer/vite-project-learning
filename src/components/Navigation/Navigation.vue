@@ -21,11 +21,15 @@ const switchToMarquee = (): void => {
 
 <template>
     <div>
+        <!-- 返回登录界面 -->
+        <el-button @click="router.push({ name: 'login' })">返回登录界面</el-button>
         <el-button @click="switchToHelloWorld">跳转到 helloWorld 组件</el-button>
         <el-button @click="switchToMarquee">跳转到 marquee 组件</el-button>
         <el-button @click="router.push('/goodsWarehouse')">跳转到商品货仓界面</el-button>
         <!-- 跳转到 namedView -->
         <el-button @click="router.push({ name: 'namedView' })">跳转到 namedView 组件</el-button>
+        <!-- 跳转到测试页面 -->
+        <el-button @click="router.push({ name: 'test' })">跳转到测试页面</el-button>
     </div>
 </template>
 

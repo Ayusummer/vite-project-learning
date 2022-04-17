@@ -5,8 +5,16 @@ import { createRouter, createWebHistory, createWebHashHistory, createMemoryHisto
 // 定义一些路由
 // 每个路由都需要映射到一个组件。
 const routes: Array<RouteRecordRaw> = [
+    // 导航守卫测试页面
     {
-        path: "/",
+        path: '/',
+        name: 'login',
+        alias: '/login',
+        component: () => import('@/views/NavigationGuardTest/login.vue'),
+    },
+    // 导航守卫测试主页面(需要登录才能访问)(导航界面)
+    {
+        path: "/navigation",
         name: "navigation",
         component: () => import("@/components/Navigation/Navigation.vue")
     },
@@ -36,11 +44,11 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'goodInfo',
                 component: () => import('@/components/GoodsWarehouse/GoodInfo.vue')
             }
-        // {
-        //     path: '/goodInfo',
-        //     name: 'goodInfo',
-        //     component: () => import('@/components/GoodsWarehouse/GoodInfo.vue')
-        // },
+            // {
+            //     path: '/goodInfo',
+            //     name: 'goodInfo',
+            //     component: () => import('@/components/GoodsWarehouse/GoodInfo.vue')
+            // },
         ]
     },
     {
@@ -49,7 +57,7 @@ const routes: Array<RouteRecordRaw> = [
         // 别名
         alias: ['/namedView1', '/namedView2'],
         // 字符串形式 redirect
-        redirect:'/namedView/user1',
+        redirect: '/namedView/user1',
         // 对象形式 redirect
         // redirect:{path:'/namedView/user1'},
         // 函数形式 redirect
@@ -69,15 +77,21 @@ const routes: Array<RouteRecordRaw> = [
                 default: () => import('@/components/NamedViewsTest/A.vue'),
             }
         },
-            {
-                path: "user2",
-                components: {
-                    b: () => import('@/components/NamedViewsTest/B.vue'),
-                    c: () => import('@/components/NamedViewsTest/C.vue')
-                }
+        {
+            path: "user2",
+            components: {
+                b: () => import('@/components/NamedViewsTest/B.vue'),
+                c: () => import('@/components/NamedViewsTest/C.vue')
             }
+        }
         ]
-    }
+    },
+    // 测试页面
+    {
+        path: '/test',
+        name: 'test',
+        component: () => import('@/components/test.vue')
+    },
 ]
 
 // 创建 router
