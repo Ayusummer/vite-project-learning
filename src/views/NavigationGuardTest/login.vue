@@ -74,7 +74,7 @@ const login = (): void => {
             <template #header>
                 <div class="card-header">
                     <!-- 返回主界面 -->
-                    <el-button @click="$router.push('/')">返回主界面</el-button>
+                    <!-- <el-button @click="$router.push('/')">返回主界面</el-button> -->
                     Login
                 </div>
             </template>
@@ -108,7 +108,8 @@ const login = (): void => {
 .card-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: center;
 }
 
 .box-card {
