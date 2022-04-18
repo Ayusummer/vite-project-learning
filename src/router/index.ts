@@ -147,7 +147,15 @@ const routes: Array<RouteRecordRaw> = [
 // 创建 router
 const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+        console.log("savaPosition", savedPosition);
+        if (savedPosition) {
+            return savedPosition
+        } else {
+            return { top: 0 }
+        }
+    }
 })
 
 // 定义路由白名单
@@ -155,7 +163,7 @@ const whiteList = ['/login', '/404', '/401', '/lock']
 
 // 将 LoadingBar 转成 VNode
 const LoadingBarVNode: VNode = createVNode(LoadingBar)
-console.log("LoadingBarVNode如下:", LoadingBarVNode);
+// console.log("LoadingBarVNode如下:", LoadingBarVNode);
 // 将 LoadingBarVNode 挂载到 body 上
 // render(LoadingBarVNode, document.body)
 
