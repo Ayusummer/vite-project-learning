@@ -28,7 +28,7 @@ const stopLoading = (): void => {
     //     window.requestAnimationFrame(() => {
     //         speed.value = 100;
     //         dom.style.width = `${speed.value}%`
-    //     })
+    //     })`
     // }, 500)
     // console.log("233")
 }

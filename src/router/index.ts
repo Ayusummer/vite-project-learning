@@ -16,6 +16,7 @@ const routes: Array<RouteRecordRaw> = [
         // 路由元信息
         meta: {
             title: '登录页面',
+            transition: 'animate__fadeIn',
         },
         component: () => import('@/views/NavigationGuardTest/login.vue'),
     },
@@ -24,7 +25,8 @@ const routes: Array<RouteRecordRaw> = [
         path: "/navigation",
         name: "navigation",
         meta: {
-            title: '组件导航页面'
+            title: '组件导航页面',
+            transition: 'animate__fadeIn',
         },
         component: () => import("@/components/Navigation/Navigation.vue")
     },
@@ -33,6 +35,7 @@ const routes: Array<RouteRecordRaw> = [
         name: 'helloWorld',
         meta: {
             title: 'HelloWorld',
+            transition: 'animate__fadeIn',
         },
         component: () => import('../components/HelloWorld.vue')
     },
@@ -41,6 +44,7 @@ const routes: Array<RouteRecordRaw> = [
         name: 'marquee',
         meta: {
             title: '跑马灯',
+            transition: 'animate__fadeIn',
         },
         component: () => import('../components/Marquee.vue')
     },
@@ -49,6 +53,7 @@ const routes: Array<RouteRecordRaw> = [
         name: 'goodsWarehouse',
         meta: {
             title: '商品仓库',
+            transition: 'animate__fadeIn',
         },
         component: () => import('@/components/GoodsWarehouse/footer.vue'),
         children: [
@@ -58,6 +63,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'goodsWarehouseMain',
                 meta: {
                     title: '商品仓库主页面',
+                    transition: 'animate__fadeIn',
                 },
                 component: () => import('@/components/GoodsWarehouse/GoodsWarehouse.vue')
             },
@@ -66,6 +72,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'goodInfo',
                 meta: {
                     title: '商品详情页面',
+                    transition: 'animate__fadeIn',
                 },
                 component: () => import('@/components/GoodsWarehouse/GoodInfo.vue')
             }
@@ -83,6 +90,7 @@ const routes: Array<RouteRecordRaw> = [
         alias: ['/namedView1', '/namedView2'],
         meta: {
             title: '命名视图',
+            transition: 'animate__fadeIn',
         },
         // 字符串形式 redirect
         redirect: '/namedView/user1',
@@ -104,6 +112,7 @@ const routes: Array<RouteRecordRaw> = [
             name: "user1",
             meta: {
                 title: 'user1',
+                transition: 'animate__fadeIn',
             },
             components: {
                 default: () => import('@/components/NamedViewsTest/A.vue'),
@@ -114,6 +123,7 @@ const routes: Array<RouteRecordRaw> = [
             name: "user2",
             meta: {
                 title: 'user2',
+                transition: 'animate__fadeIn',
             },
             components: {
                 b: () => import('@/components/NamedViewsTest/B.vue'),
@@ -128,6 +138,7 @@ const routes: Array<RouteRecordRaw> = [
         name: 'test',
         meta: {
             title: '测试页面',
+            transition: 'animate__fadeIn',
         },
         component: () => import('@/components/test.vue')
     },

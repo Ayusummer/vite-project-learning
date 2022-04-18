@@ -1,42 +1,14 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
-import Marquee from './components/Marquee.vue';
-import VueOn from './components/vueon.vue';
-import VueModel from './components/vuemodel/vuemodel.vue';
-import VueBind from './components/vuebind.vue';
-import VueComputed from './components/vuecomputed.vue';
-import VueComputedT from './components/vuecomputedt_test.vue';
-import VueWatch from './components/VueWatch/vuewatch.vue';
-import Vuewatch from './components/VueWatch/vuewatch.vue';
-import Vuewatcheffect from './components/VueWatch/vuewatcheffect.vue';
-import lessLayout from './layout_less/less_layout.vue';
-import TransitionTest from './components/transition/transition_test.vue';
-import TransitionTestGsap from './components/transition/transition_test_gsap.vue';
-import Transition_test_gsap from './components/transition/transition_test_gsap.vue';
-import Transition_test_appear from './components/transition/transition_test_appear.vue';
-import TransitionGroupTest from './components/transition_group/transition_group_test.vue';
-import TransitionGroupTestFLIP from './components/transition_group/transition_group_test_flip.vue';
-import TransitionGroupTestStatus from './components/transition_group/transition_group_test_status.vue';
-import PIA from './components/ProvideInject/PI_A.vue';
-import BCTP_parent from './components/BrotherComponentsTransferParams/BCTP_parent.vue';
-import DialogVModelParent from './components/vuemodel/Dialog_parent.vue';
-import VueDirective from './components/VueDirective/VueDirective.vue';
-import DIYHook from './components/HookUse/DIYHook.vue';
-import StringFilterTest from './components/VueGlobalProperties/stringFilterTest.vue';
-import WatchEffectTest2Vue from './components/VueWatch/WatchEffectTest2.vue';
-import AnotherLoadingTest from './components/AnotherLoading/AnotherLoadingTest.vue'
-import Test from './components/test.vue'
-import FormTestVue from './components/ElementPlusTest/FormTest.vue';
-import ElementUIInputStyleTest from './components/ScopedDeepTest/ELementUIInputStyleChange.vue'
-import PiniaTest from '@/components/PiniaTest/PiniaTest.vue'
-import ElemntBackTopTestVue from './components/ElementPlusTest/ElemntBackTopTest.vue';
-import ElementBackTopTest from './components/ElementPlusTest/ElemntBackTopTest.vue';
+import 'animate.css'
 </script>
 
 <template>
-  <router-view></router-view>
+  <!-- route 即路由信息, Component 即当前 VNode -->
+  <router-view #default="{ route, Component }">
+    <transition :enter-active-class="`animate__animated ${route.meta.transition}`">
+      <component :is="Component"></component>
+    </transition>
+  </router-view>
 </template>
 
 <style lang="less">
@@ -45,10 +17,5 @@ body,
 #app {
   height: 100%;
   overflow: hidden;
-}
-
-.vueLogo {
-  height: 40%;
-  border: 1px solid #ccc;
 }
 </style>
