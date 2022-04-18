@@ -3,7 +3,7 @@
 
 <template>
     <!-- 返回主界面 -->
-    <el-button @click="$router.push('/')">返回主界面</el-button>
+    <el-button @click="$router.push('/navigation')">返回导航界面</el-button>
     <!-- 跳转到 namedView主界面 -->
     <el-button @click="$router.push({ name: 'namedView' })">跳转到 namedView 主界面</el-button>
     <!-- 跳转到 user1 -->

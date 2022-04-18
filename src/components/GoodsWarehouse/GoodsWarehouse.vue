@@ -38,8 +38,6 @@ const toGoodsDetail_dynamic = (good: good) => {
 
 <template>
     <div>
-        <!-- 返回主界面 -->
-        <el-button @click="router.push('/')">返回主界面</el-button>
         <el-table :data=data>
             <el-table-column label="商品名称" prop="name" width="180">
             </el-table-column>
