@@ -23,7 +23,7 @@ const piniaPlugin = (options: Options) => {
         const { store } = context;
         // 从 localstorage 获取数据
         const data = getStorage(`${options.key ?? __piniaKey__}-${store.$id}`)
-        console.log(data)
+        // console.log(data)
         // state 有变化时, 将数据存入 localstorage
         store.$subscribe(() => {
             setStorage(`${options.key ?? __piniaKey__}-${store.$id}`, toRaw(store.$state))
