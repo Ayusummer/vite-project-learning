@@ -3,19 +3,25 @@
 <!-- IDE: WebStorm -->
 <!-- 创建者: 233 -->
 <template>
-<div style="margin:200px;">
-  <el-input class="ipt"></el-input>
-</div>
+  <div>
+    <!-- 返回导航页面 -->
+    <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
+    <div style="margin:200px;">
+      <el-input class="ipt"></el-input>
+    </div>
+  </div>
+
 </template>
 
 <script setup lang="ts">
 </script>
 
 <style scoped lang="less">
-.ipt{
+.ipt {
+
   // 样式穿透修改 input 样式
-  :deep(input){
-    background-color:red;
+  :deep(input) {
+    background-color: red;
   }
 }
 </style>

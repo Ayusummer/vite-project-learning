@@ -14,6 +14,8 @@ const getFlag = (flag: boolean) => {
 
 <template>
     <div>
+        <!-- 返回导航页面 -->
+        <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
         <BCTP_A @transferFlag="getFlag"></BCTP_A>
         <BCTP_B :flag="BCTP_A_flag"></BCTP_B>
     </div>

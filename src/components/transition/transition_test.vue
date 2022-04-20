@@ -10,6 +10,8 @@ const flag = ref<boolean>(true)
 
 <template>
 <div>
+    <!-- 返回导航页面 -->
+    <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
     <button @click="flag=!flag"> switch </button>
     <transition 
         enter-active-class="animate__animated animate__bounce"

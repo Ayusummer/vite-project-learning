@@ -81,6 +81,8 @@ const useTestChange5 = () => {
 
 <template>
     <el-scrollbar>
+        <!-- 返回导航页面 -->
+        <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
         <el-backtop
             target=".page-component__scroll, .el-scrollbar__wrap"
             :right="40"

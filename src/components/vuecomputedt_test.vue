@@ -68,6 +68,8 @@ const del = (item: goods): void => {
 <template>
     <!-- 购物车 -->
     <div>
+        <!-- 返回导航页面 -->
+        <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
         <table style="width:80%" border>
             <thead>
                 <tr>

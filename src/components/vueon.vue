@@ -11,9 +11,14 @@ const childClick = (): void => {
 </script>
 
 <template>
+<div>
+    <!-- 返回导航页面 -->
+    <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
     <div class="father" @click.self="fatherClick">
         <div class="child" @click="childClick"></div>
     </div>
+</div>
+
 </template>
 
 <style scoped>

@@ -37,6 +37,8 @@ onDeactivated(() => {
 
 <template>
 <div>
+    <!-- 返回导航页面 -->
+    <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
     <!-- 账密输入表单 -->
     <table>
         <!-- 账号输入区域 -->

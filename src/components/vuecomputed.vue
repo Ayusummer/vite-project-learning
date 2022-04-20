@@ -75,12 +75,14 @@ $total = computed<number>(() => {
 </script>
 
 <template>
-    <div>{{ mul1 }}</div>
-    <div>{{ mul2 }}</div>
-    <div @click="mul2 = 100">click</div>
-
-    <!-- 购物车示例 -->
     <div>
+        <!-- 返回导航页面 -->
+        <el-button @click="$router.push('/navigation')">返回</el-button>
+        <div>{{ mul1 }}</div>
+        <div>{{ mul2 }}</div>
+        <div @click="mul2 = 100">click</div>
+
+        <!-- 购物车示例 -->
         <table style="width:800px" border>
             <thead>
                 <tr>
@@ -96,9 +98,7 @@ $total = computed<number>(() => {
                     <td align="center">
                         <button @click="addAndSub(item, false)">-</button>
                         {{ item.num }}
-                        <button
-                            @click="addAndSub(item, true)"
-                        >+</button>
+                        <button @click="addAndSub(item, true)">+</button>
                     </td>
                     <td align="center">{{ item.num * item.price }}</td>
                     <td align="center">

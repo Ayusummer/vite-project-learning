@@ -7,6 +7,8 @@ provide('flag', ref(false))  // 两个参数, 前者是 key 后者是 value
 
 <template>
     <div class="PI_A">
+        <!-- 返回导航页面 -->
+        <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
         <div>A 组件内容区域</div>
         <PIB></PIB>
     </div>

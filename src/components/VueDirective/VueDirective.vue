@@ -28,9 +28,13 @@ const vMove: Directive<any, void> = (el: HTMLDivElement, binding: DirectiveBindi
 </script>
 
 <template>
-    <div v-move class="box">
-        <div class="header"></div>
-        <div>内容</div>
+    <div>
+        <!-- 返回导航页面 -->
+        <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
+        <div v-move class="box">
+            <div class="header"></div>
+            <div>内容</div>
+        </div>
     </div>
 </template>
 
@@ -44,6 +48,7 @@ const vMove: Directive<any, void> = (el: HTMLDivElement, binding: DirectiveBindi
     width: 200px;
     height: 200px;
     border: 3px solid #000;
+
     // 拖曳 header 样式定义
     .header {
         width: 100%;

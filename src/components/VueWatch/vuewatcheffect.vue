@@ -27,6 +27,8 @@ const stopWatch = () => stop()
 
 <template>
     <div>
+        <!-- 返回导航页面 -->
+        <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
         <input id="ipt" type="text" v-model="message" />
         <input type="text" v-model="message2" />
         <button @click="stopWatch">停止监听</button>

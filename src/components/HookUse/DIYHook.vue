@@ -9,6 +9,8 @@ useBase64({ el: '#img' }).then(res => {
 
 <template>
     <div>
+        <!-- 返回导航页面 -->
+        <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
         <img id="img" width="512" height="512" src="../../assets/M4.png" alt="M4" />
     </div>
 </template>

@@ -81,6 +81,8 @@ const useTestChange5 = () => {
 
 <template>
     <div class="box">
+        <!-- 返回导航页面 -->
+        <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
         <el-backtop target=".box" :right="40" :bottom="40" :visibility-height="1">UP</el-backtop>
         <!-- 用于占位的 card -->
         <div>

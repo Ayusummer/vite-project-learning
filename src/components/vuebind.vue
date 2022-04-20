@@ -28,6 +28,9 @@ const style: Style = {
 </script>
 
 <template>
+<div>
+    <!-- 返回导航页面 -->
+    <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
     <!-- v-model 下拉菜单绑定 flag -->
     <select v-model="flag">
         <option type="string" value="true">true</option>
@@ -38,6 +41,8 @@ const style: Style = {
     <!-- 利用元组进行样式绑定 -->
     <div :class="flag1">{{ flag1 }}</div>
     <div :style="style">2222</div>
+</div>
+
 </template>
 
 <style scoped>

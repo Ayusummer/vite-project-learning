@@ -33,6 +33,9 @@ watch(() => message2.nav.bar.title, (newVal, oldVal) => {
 </script>
 
 <template>
+<div>
+    <!-- 返回导航页面 -->
+    <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
     <div>
         message.nav.bar.name:
         <input v-model="message.nav.bar.name" type="text" />
@@ -41,6 +44,8 @@ watch(() => message2.nav.bar.title, (newVal, oldVal) => {
         message2.nav.bar.title:
         <input v-model="message2.nav.bar.title" type="text" />
     </div>
+</div>
+
 </template>
 
 <style>

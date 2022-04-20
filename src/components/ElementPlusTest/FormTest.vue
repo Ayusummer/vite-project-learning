@@ -1,4 +1,7 @@
 <template>
+<div>
+    <!-- 返回导航页面 -->
+    <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
     <el-form :model="form" label-width="120px">
         <el-form-item label="Activity name">
             <el-input v-model="form.name" />
@@ -50,6 +53,7 @@
             <el-button>Cancel</el-button>
         </el-form-item>
     </el-form>
+    </div>
 </template>
 
 <script lang="ts" setup>

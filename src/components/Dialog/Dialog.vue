@@ -24,6 +24,8 @@ const data = reactive<names[]>([
 
 <template>
     <div>
+        <!-- 返回导航页面 -->
+        <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
         <header class="header">
             <slot name="dialog_header" />
         </header>

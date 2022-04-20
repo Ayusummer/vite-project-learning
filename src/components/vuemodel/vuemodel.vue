@@ -1,6 +1,7 @@
 <!-- v-model 实现简易计算器, v-model 双向绑定示例 -->
 <script setup lang="ts">
 import { ref, Ref } from 'vue'
+import Dialog_parent from './Dialog_parent.vue';
 
 const n1: Ref<number> = ref(0)
 const n2: Ref<number> = ref(0)
@@ -31,20 +32,27 @@ const calculate = (): void => {
 </script>
 
 <template>
-    {{ result }}
-    <input type="number" v-model="n1" />
-    <select v-model="opt">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-    </select>
-    <input type="number" v-model="n2" />
-    <input type="button" value="=" @click="calculate" />
-    <input type="number" v-model="result" />
+    <div>
+        <!-- 返回导航页面 -->
+        <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
+        {{ result }}
+        <input type="number" v-model="n1" />
+        <select v-model="opt">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" v-model="n2" />
+        <input type="button" value="=" @click="calculate" />
+        <input type="number" v-model="result" />
 
-    <input v-model="message" type="text" />
-    <div>{{ message }}</div>
+        <input v-model="message" type="text" />
+        <div>{{ message }}</div>
+
+        <Dialog_parent />
+    </div>
+
 </template>
 
 <style scoped>

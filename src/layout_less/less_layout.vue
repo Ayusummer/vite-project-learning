@@ -16,17 +16,17 @@ const getList = (list: number[]) => {
 </script>
 
 <template>
-    <div class="layout_less">
-        <!-- <div>{{ exposeArrayFromMenu }}</div> -->
-        <lessMenu
-            message="传递一个字符串"
-            v-bind:data_array="data_array"
-            @onclickTap="getList"
-            ref="exposeArrayFromMenu"
-        />
-        <div class="layout_less-right">
-            <lessHeader />
-            <lessContent />
+    <div>
+        <!-- 返回导航页面 -->
+        <el-button @click="$router.push('/navigation')">返回导航页面</el-button>
+        <div class="layout_less">
+            <!-- <div>{{ exposeArrayFromMenu }}</div> -->
+            <lessMenu message="传递一个字符串" v-bind:data_array="data_array" @onclickTap="getList"
+                ref="exposeArrayFromMenu" />
+            <div class="layout_less-right">
+                <lessHeader />
+                <lessContent />
+            </div>
         </div>
     </div>
 </template>
@@ -37,6 +37,7 @@ const getList = (list: number[]) => {
     height: 100%;
     overflow: hidden;
     border: 1px solid #ccc;
+
     &-right {
         display: flex;
         flex-direction: column; // 垂直方向
